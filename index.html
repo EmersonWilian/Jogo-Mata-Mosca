@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Mosquito</title>
+    <script src="jogo.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+    
+
+
+</head>
+<body onresize="ajustaTamanhoPalcoJogo()">
+
+    <!--Criando painel de vida e de Cronometro-->
+    <div class="painel">
+        <div class="vidas"></div>
+        <img id ="v1" src="imagens/coracao_cheio.png" alt="">
+        <img id ="v2" src="imagens/coracao_cheio.png" alt="">
+        <img id ="v3" src="imagens/coracao_cheio.png" alt="">
+
+        <div class="cronometro">Tempo restate: <span id="cronometro"></span></div>
+
+    </div>
+
+
+    <script>
+
+        document.getElementById('cronometro').innerHTML = tempo
+        //================================ Colocando tempo para os mosquitos sumirem ====================================
+        
+        //A ação será executada a cada "X" segundos escolhidos
+        var criaMosca = setInterval(function(){
+            posicaoRandomica() // executando a posição randomica a cada 1000 milisegundos
+        }, 
+        criaMoscaTempo)   
+
+
+    </script>
+    
+</body>
+</html>
